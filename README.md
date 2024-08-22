@@ -11,7 +11,9 @@ This repository contains implementations and explanations of various algorithms 
 5. [Dynamic Programming](#dynamic-programming)
 6. [Geometric Algorithms](#geometric-algorithms)
 7. [Advanced Techniques](#advanced-techniques)
-8. [Rust Basics and Snippets](#rust-basics-and-snippets)
+8. [Number Theory](#number-theory)
+9. [Optimization Algorithms](#optimization-algorithms)
+10. [Rust Basics and Snippets](#rust-basics-and-snippets)
 
 ## Data Structures
 
@@ -28,6 +30,11 @@ This repository contains implementations and explanations of various algorithms 
 - [Persistent Segment Tree](persistent-segment-tree-md.md)
 - [Splay Tree](splay-tree-md.md) ([Continued](splay-tree-md-continued.md))
 - [Treap](treap-md.md)
+- [Skip List](skip-list-md.md)
+- [Rope](rope-data-structure-md.md)
+- [Van Emde Boas Tree](van-emde-boas-tree-md.md)
+- [Wavelet Tree](wavelet-tree-md.md)
+- [Bloom Filter](bloom-filter-md.md)
 
 ## Sorting and Searching Algorithms
 
@@ -47,14 +54,21 @@ This repository contains implementations and explanations of various algorithms 
 - [Lowest Common Ancestor (LCA)](lca-binary-lifting-md.md)
 - [Heavy-Light Decomposition](heavy-light-decomposition-md.md)
 - [Edmonds-Karp Maximum Flow](edmonds-karp-md.md)
+- [Johnson's Algorithm for All Pairs Shortest Paths](johnsons-algorithm-md.md)
+- [Hierholzer's Algorithm for Euler Paths and Circuits](hierholzers-algorithm-md.md)
+- [Kosaraju's Algorithm for Strongly Connected Components](kosarajus-algorithm-md.md)
 
 ## String Algorithms
 
 - [KMP (Knuth-Morris-Pratt) Algorithm](kmp-algorithm-md.md)
 - [Rabin-Karp Algorithm](rabin-karp-md.md)
-- [Aho-Corasick Algorithm](aho-corasick-md.md) ([Alternative Implementation](aho-corasick-md-2.md))
+- [Aho-Corasick Algorithm](aho-corasick-md.md)
 - [Suffix Array and LCP Array](suffix-array-lcp-md.md)
 - [Suffix Array Construction (DC3 Algorithm)](suffix-array-dc3-md.md)
+- [Z-Algorithm](z-algorithm-md.md)
+- [Manacher's Algorithm](manachers-algorithm-md.md)
+- [Burrows-Wheeler Transform](burrows-wheeler-transform-md.md)
+- [Suffix Automaton](suffix-automaton-md.md)
 
 ## Dynamic Programming
 
@@ -70,6 +84,16 @@ This repository contains implementations and explanations of various algorithms 
 - [Divide and Conquer](rust-divide-and-conquer-examples.rs)
 - [Greedy Algorithms](rust-greedy-algorithms.rs)
 - [Backtracking](rust-backtracking-examples.rs)
+
+## Number Theory
+
+- [Sieve of Eratosthenes](sieve-of-eratosthenes-md.md)
+- [Miller-Rabin Primality Test](miller-rabin-primality-test-md.md)
+
+## Optimization Algorithms
+
+- [Simplex Algorithm for Linear Programming](simplex-algorithm-md.md)
+- [Hungarian Algorithm (Maximum Bipartite Matching)](hungarian-algorithm-md.md)
 
 ## Rust Basics and Snippets
 
@@ -90,7 +114,5 @@ This repository contains implementations and explanations of various algorithms 
 - [Rust Hash Structures](rust-hash-structures.rs)
 - [Rust Stack and Queue](rust-stack-and-queue.rs)
 - [Rust Linked List](rust-linked-list.rs)
-
-## Index
 
 For a complete overview of all topics, please refer to the [DSA Index](dsa-index.md).
