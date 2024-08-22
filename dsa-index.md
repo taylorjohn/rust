@@ -1,31 +1,112 @@
-# Advanced Data Structures and Algorithms in Rust
+# Data Structures and Algorithms Index
 
-This collection provides implementations and explanations of several advanced data structures and algorithms in Rust. Each structure is presented with its implementation, key concepts, and use cases.
+This index provides an overview of all the data structures and algorithms implemented in this collection, organized by category.
 
-## Table of Contents
+## Data Structures
 
-1. [AVL Tree](avl_tree.md)
-2. [Red-Black Tree](red_black_tree.md)
-3. [B-Tree](b_tree.md)
-4. [Trie (Prefix Tree)](trie.md)
+### Trees
+- AVL Tree
+- Red-Black Tree
+- B-Tree
+- Trie (Prefix Tree)
+- Advanced Trie
+- Segment Tree
+- Segment Tree with Lazy Propagation
+- Persistent Segment Tree
+- Splay Tree
+- Treap
+- Van Emde Boas Tree
+- Wavelet Tree
 
-Each data structure is implemented with a focus on Rust's safety features and idiomatic code. The implementations include basic operations like insertion, deletion (where applicable), and search.
+### Heaps
+- Binary Heap (Priority Queue)
 
-## Choosing the Right Data Structure
+### Disjoint Set
+- Union-Find (Disjoint Set)
 
-When deciding which data structure to use, consider the following factors:
+### Array-based Structures
+- Fenwick Tree (Binary Indexed Tree)
 
-- The types of operations you need to perform (e.g., insertions, deletions, searches)
-- The expected size of your data set
-- The nature of your data (e.g., strings, numbers)
-- The space constraints of your application
-- The need for ordered data
+### Probabilistic Data Structures
+- Bloom Filter
 
-Here's a quick guide on when to use each structure:
+### Lists
+- Skip List
+- Rope (for string operations)
 
-- **AVL Tree**: Use when you need a strictly balanced tree with faster lookups than Red-Black trees, but can tolerate slightly slower insertions and deletions.
-- **Red-Black Tree**: Use when you need a balanced tree with faster insertions and deletions than AVL trees, and can tolerate slightly slower lookups.
-- **B-Tree**: Use when working with large datasets that don't fit in memory, such as in database systems or file systems.
-- **Trie**: Use for efficient prefix-based operations on strings, such as in autocomplete systems, spell checkers, or IP routing tables.
+## Sorting and Searching Algorithms
 
-For more detailed information on each data structure, including implementation details and specific use cases, refer to the individual Markdown files linked in the table of contents.
+### Sorting
+- Merge Sort
+- Quick Sort
+- Heap Sort
+- Counting Sort
+- Radix Sort
+
+### Searching
+- Binary Search
+
+## Graph Algorithms
+
+### Shortest Path
+- Dijkstra's Algorithm
+- Bellman-Ford Algorithm
+- Floyd-Warshall Algorithm
+- Johnson's Algorithm for All Pairs Shortest Paths
+
+### Minimum Spanning Tree
+- Kruskal's Algorithm
+
+### Graph Traversal and Connectivity
+- Depth-First Search (DFS)
+- Breadth-First Search (BFS)
+- Topological Sort
+- Tarjan's Strongly Connected Components
+- Kosaraju's Algorithm for Strongly Connected Components
+
+### Special Graph Algorithms
+- A* Search Algorithm
+- Lowest Common Ancestor (LCA)
+- Heavy-Light Decomposition
+- Edmonds-Karp Maximum Flow
+- Hierholzer's Algorithm for Euler Paths and Circuits
+
+## String Algorithms
+
+- KMP (Knuth-Morris-Pratt) Algorithm
+- Rabin-Karp Algorithm
+- Aho-Corasick Algorithm
+- Suffix Array and LCP Array
+- Suffix Array Construction (DC3 Algorithm)
+- Z-Algorithm
+- Manacher's Algorithm
+- Burrows-Wheeler Transform
+- Suffix Automaton
+
+## Dynamic Programming
+- Knapsack Problem
+- Various DP problems and techniques
+
+## Geometric Algorithms
+- Convex Hull (Graham Scan)
+
+## Advanced Techniques
+- Divide and Conquer
+- Greedy Algorithms
+- Backtracking
+
+## Number Theory
+- Sieve of Eratosthenes
+- Miller-Rabin Primality Test
+
+## Optimization Algorithms
+- Simplex Algorithm for Linear Programming
+- Hungarian Algorithm (Maximum Bipartite Matching)
+
+## Rust-specific Topics
+- Rust Basics
+- Rust Enums
+- Rust String Operations
+- Rust Array Operations
+- Various Rust Snippets and Examples
+
