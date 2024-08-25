@@ -1,118 +1,128 @@
 # Rust Algorithms and Data Structures
 
-This repository contains implementations and explanations of various algorithms and data structures in Rust. It serves as a comprehensive resource for learning and reference.
+This repository contains implementations and explanations of various algorithms and data structures in Rust, as well as guides for analyzing and solving coding interview questions.
 
 ## Table of Contents
 
-1. [Data Structures](#data-structures)
-2. [Sorting and Searching Algorithms](#sorting-and-searching-algorithms)
-3. [Graph Algorithms](#graph-algorithms)
-4. [String Algorithms](#string-algorithms)
-5. [Dynamic Programming](#dynamic-programming)
-6. [Geometric Algorithms](#geometric-algorithms)
-7. [Advanced Techniques](#advanced-techniques)
-8. [Number Theory](#number-theory)
-9. [Optimization Algorithms](#optimization-algorithms)
-10. [Rust Basics and Snippets](#rust-basics-and-snippets)
+1. [Interview Question Analysis](#interview-question-analysis)
+2. [Basic Programming](#basic-programming)
+3. [Data Structures](#data-structures)
+4. [Algorithms](#algorithms)
+5. [Advanced Techniques](#advanced-techniques)
+6. [String Processing](#string-processing)
+7. [Graph Algorithms](#graph-algorithms)
+8. [Numerical Algorithms](#numerical-algorithms)
+9. [Optimization](#optimization)
+10. [Geometric Algorithms](#geometric-algorithms)
+
+## Interview Question Analysis
+
+- [Analyzing Interview Questions](interview-question-analysis.md)
+- [Simple Interview Questions](simple-questions.md)
+- [Medium Interview Questions](medium-questions.md)
+- [Hard Interview Questions](hard-questions.md)
+- [Question Keyword Analysis](question-keyword-analysis.md)
+- [Question Analysis Examples](question-analysis-examples.md)
+
+## Basic Programming
+
+- [Rust Basics](rust-basics.md)
+- [Rust Advanced Topics](rust-advanced-topics-md.md)
+- [Control Flow](basic_programming/control_flow.md)
+- [Error Handling](basic_programming/error_handling.md)
 
 ## Data Structures
 
+- [Array Operations](rust-array-operations.rs)
+- [String Operations](rust-string-operations.rs)
+- [Hash Table](data_structures/hash_table.md)
+- [Linked List](rust-linked-list.rs)
+- [Stack and Queue](rust-stack-and-queue.rs)
+- [Heap (Priority Queue)](rust-heaps-and-priority-queues.rs)
+- [Tree](data_structures/tree.md)
+- [Binary Search Tree](binary-search-tree-md.md)
 - [AVL Tree](avl-tree-md.md)
 - [Red-Black Tree](red-black-tree-md.md)
-- [B-Tree](b-tree-md.md) ([Continued](b-tree-md-continued.md))
+- [B-Tree](b-tree-md.md)
 - [Trie (Prefix Tree)](trie-md.md)
 - [Advanced Trie](advanced-trie-md.md)
-- [Heap (Priority Queue)](heap-md.md)
-- [Disjoint Set (Union-Find)](disjoint-set-md.md)
-- [Fenwick Tree (Binary Indexed Tree)](fenwick-tree-md.md)
 - [Segment Tree](segment-tree-md.md)
 - [Segment Tree with Lazy Propagation](segment-tree-lazy-prop-md.md)
-- [Persistent Segment Tree](persistent-segment-tree-md.md)
-- [Splay Tree](splay-tree-md.md) ([Continued](splay-tree-md-continued.md))
-- [Treap](treap-md.md)
-- [Skip List](skip-list-md.md)
-- [Rope](rope-data-structure-md.md)
-- [Van Emde Boas Tree](van-emde-boas-tree-md.md)
-- [Wavelet Tree](wavelet-tree-md.md)
+- [Fenwick Tree (Binary Indexed Tree)](fenwick-tree-md.md)
+- [Disjoint Set (Union-Find)](disjoint-set-md.md)
 - [Bloom Filter](bloom-filter-md.md)
+- [Skip List](skip-list-md.md)
+- [Van Emde Boas Tree](van-emde-boas-tree-md.md)
 
-## Sorting and Searching Algorithms
+## Algorithms
 
-- [Binary Search](binary-search-md.md)
 - [Sorting Algorithms](rust-sorting-algorithms.rs)
-
-## Graph Algorithms
-
-- [Graph Representation and Algorithms](graph-md.md)
-- [Dijkstra's Algorithm](dijkstra-md.md)
-- [Bellman-Ford Algorithm](bellman-ford-md.md)
-- [Floyd-Warshall Algorithm](floyd-warshall-md.md)
-- [A* Search Algorithm](a-star-search-md.md)
-- [Kruskal's Minimum Spanning Tree](kruskals-mst-md.md)
-- [Topological Sort](topological-sort-md.md)
-- [Tarjan's Strongly Connected Components](tarjan-scc-md.md)
-- [Lowest Common Ancestor (LCA)](lca-binary-lifting-md.md)
-- [Heavy-Light Decomposition](heavy-light-decomposition-md.md)
-- [Edmonds-Karp Maximum Flow](edmonds-karp-md.md)
-- [Johnson's Algorithm for All Pairs Shortest Paths](johnsons-algorithm-md.md)
-- [Hierholzer's Algorithm for Euler Paths and Circuits](hierholzers-algorithm-md.md)
-- [Kosaraju's Algorithm for Strongly Connected Components](kosarajus-algorithm-md.md)
-
-## String Algorithms
-
-- [KMP (Knuth-Morris-Pratt) Algorithm](kmp-algorithm-md.md)
-- [Rabin-Karp Algorithm](rabin-karp-md.md)
-- [Aho-Corasick Algorithm](aho-corasick-md.md)
-- [Suffix Array and LCP Array](suffix-array-lcp-md.md)
-- [Suffix Array Construction (DC3 Algorithm)](suffix-array-dc3-md.md)
-- [Z-Algorithm](z-algorithm-md.md)
-- [Manacher's Algorithm](manachers-algorithm-md.md)
-- [Burrows-Wheeler Transform](burrows-wheeler-transform-md.md)
-- [Suffix Automaton](suffix-automaton-md.md)
-
-## Dynamic Programming
-
-- [Dynamic Programming Basics](dynamic-programming-md.md)
-- [Knapsack Problem](knapsack-problem-md.md)
-
-## Geometric Algorithms
-
-- [Convex Hull (Graham Scan)](graham-scan-md.md)
-
-## Advanced Techniques
-
+- [Binary Search](binary-search-md.md)
+- [Two Pointers Technique](two-pointers-md.md)
+- [Sliding Window](algorithms/sliding_window.md)
 - [Divide and Conquer](rust-divide-and-conquer-examples.rs)
+- [Dynamic Programming](rust-dynamic-programming.rs)
 - [Greedy Algorithms](rust-greedy-algorithms.rs)
 - [Backtracking](rust-backtracking-examples.rs)
 
-## Number Theory
+## Advanced Techniques
 
+- [Bit Manipulation](bit-manipulation-techniques-md.md)
+- [Matrix Operations](matrix-operations-md.md)
+
+## String Processing
+
+- [String Manipulation](rust-string-operations.rs)
+- [KMP Algorithm](kmp-algorithm-md.md)
+- [Rabin-Karp Algorithm](rabin-karp-md.md)
+- [Z Algorithm](z-algorithm-md.md)
+- [Aho-Corasick Algorithm](aho-corasick-algorithm-md.md)
+- [Suffix Array and LCP](suffix-array-lcp-md.md)
+- [Suffix Tree](suffix-tree-md.md)
+- [Manacher's Algorithm](manachers-algorithm-md.md)
+- [Burrows-Wheeler Transform](burrows-wheeler-transform-md.md)
+
+## Graph Algorithms
+
+- [Graph Representation](graph-md.md)
+- [Depth-First Search (DFS)](dfs-md.md)
+- [Breadth-First Search (BFS)](breadth-first-search-md.md)
+- [Dijkstra's Algorithm](dijkstra-md.md)
+- [Bellman-Ford Algorithm](bellman-ford-md.md)
+- [Floyd-Warshall Algorithm](floyd-warshall-md.md)
+- [Kruskal's Minimum Spanning Tree](kruskals-mst-md.md)
+- [Prim's Minimum Spanning Tree](algorithms/prims_mst.md)
+- [Topological Sort](topological-sort-md.md)
+- [Strongly Connected Components (Tarjan's)](tarjans-scc-algorithm-md.md)
+- [Articulation Points and Bridges](graph_algorithms/articulation_points_and_bridges.md)
+- [Network Flow (Ford-Fulkerson)](ford-fulkerson-edmonds-karp-md.md)
+- [Bipartite Matching](graph_algorithms/bipartite_matching.md)
+
+## Numerical Algorithms
+
+- [Greatest Common Divisor (GCD)](numerical_algorithms/gcd.md)
+- [Fast Power](fast-exponentiation-md.md)
 - [Sieve of Eratosthenes](sieve-of-eratosthenes-md.md)
 - [Miller-Rabin Primality Test](miller-rabin-primality-test-md.md)
+- [Fast Fourier Transform (FFT)](fast-fourier-transform-md.md)
 
-## Optimization Algorithms
+## Optimization
 
-- [Simplex Algorithm for Linear Programming](simplex-algorithm-md.md)
-- [Hungarian Algorithm (Maximum Bipartite Matching)](hungarian-algorithm-md.md)
+- [Simplex Algorithm](simplex-algorithm-md.md)
+- [Hungarian Algorithm](hungarian-algorithm-md.md)
 
-## Rust Basics and Snippets
+## Geometric Algorithms
 
-- [Rust Basics](rust-basics.rs)
-- [Rust Enums](rust-enums.rs)
-- [Rust String Operations](rust-string-operations.rs)
-- [Rust Array Operations](rust-array-operations.rs)
-- [Rust Basic Snippets](rust-basic-snippets.rs)
-- [Rust Algorithm Snippets](rust-algorithm-snippets.rs)
-- [Rust Data Structures and Algorithms Overview](rust-data-structures-algorithms.rs)
+- [Convex Hull (Graham's Scan)](convex-hull-grahams-scan-md.md)
+- [Line Intersection](geometric_algorithms/line_intersection.md)
+- [Closest Pair of Points](geometric_algorithms/closest_pair_of_points.md)
 
-## Additional Resources
+Each link in this README leads to a detailed markdown file or Rust source file containing implementations, explanations, and use cases for the respective topic.
 
-- [Rust Algorithm Detailed Examples](rust-algorithm-detailed-examples.rs)
-- [Rust Algorithm Extended Examples](rust-algorithm-extended-examples.rs)
-- [Rust Recursion Examples](rust-recursion-examples.rs)
-- [Rust Pathfinding Algorithms](rust-pathfinding-algorithms.rs)
-- [Rust Hash Structures](rust-hash-structures.rs)
-- [Rust Stack and Queue](rust-stack-and-queue.rs)
-- [Rust Linked List](rust-linked-list.rs)
+## Contributing
 
-For a complete overview of all topics, please refer to the [DSA Index](dsa-index.md).
+Contributions to this repository are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
