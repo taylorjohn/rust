@@ -5,22 +5,14 @@ The Knapsack Problem is a problem in combinatorial optimization: Given a set of 
 ## Implementation
 
 ```rust
-#[derive(Debug)]
-struct Item {
-    weight: usize,
-    value: usize,
-}
-
-fn knapsack(items: &[Item], capacity: usize) -> usize {
-    let n = items.len();
+fn knapsack(weights: &[usize], values: &[usize], capacity: usize) -> usize {
+    let n = weights.len();
     let mut dp = vec![vec![0; capacity + 1]; n + 1];
 
     for i in 1..=n {
-        for w in 1..=capacity {
-            if items[i-1].weight <= w {
-                dp[i][w] = dp[i-1][w].max(
-                    dp[i-1][w - items[i-1].weight] + items[i-1].value
-                );
+        for w in 0..=capacity {
+            if weights[i-1] <= w {
+                dp[i][w] = dp[i-1][w].max(dp[i-1][w - weights[i-1]] + values[i-1]);
             } else {
                 dp[i][w] = dp[i-1][w];
             }
@@ -32,24 +24,14 @@ fn knapsack(items: &[Item], capacity: usize) -> usize {
 
 // Usage
 fn main() {
-    let items = vec![
-        Item { weight: 10, value: 60 },
-        Item { weight: 20, value: 100 },
-        Item { weight: 30, value: 120 },
-    ];
+    let weights = vec![10, 20, 30];
+    let values = vec![60, 100, 120];
     let capacity = 50;
-
-    let max_value = knapsack(&items, capacity);
+    
+    let max_value = knapsack(&weights, &values, capacity);
     println!("Maximum value: {}", max_value);
 }
 ```
-
-## Key Concepts
-
-1. **Dynamic Programming**: The problem is solved by breaking it down into smaller subproblems.
-2. **Optimal Substructure**: The optimal solution can be constructed from optimal solutions of its subproblems.
-3. **2D Table**: Uses a 2D table to store intermediate results.
-4. **Bottom-up Approach**: Builds the solution for larger problems using solutions of smaller problems.
 
 ## When to Use
 
@@ -67,4 +49,21 @@ The Knapsack Problem is particularly useful in:
 - Budget-constrained procurement decisions
 - Cutting stock problems in manufacturing
 
-The main advantage of the Dynamic Programming approach to the Knapsack Problem is its ability to find the optimal solution in pseudo-polynomial time, which is much faster than the exponential time of a naive recursive approach for practical problem sizes.
+## Time Complexity
+
+The time complexity of this dynamic programming solution is O(nW), where n is the number of items and W is the capacity of the knapsack.
+
+## Space Complexity
+
+The space complexity is also O(nW) due to the 2D array used for memoization.
+
+## Variations
+
+1. 0/1 Knapsack: Each item can be picked only once (implemented above).
+2. Fractional Knapsack: Items can be broken into smaller units (solved using a greedy approach).
+3. Bounded Knapsack: Each item has a limited number of copies.
+4. Unbounded Knapsack: Each item has unlimited copies.
+
+These variations can be solved by modifying the basic dynamic programming approach or using different algorithms altogether.
+
+The Knapsack Problem is a classic example of dynamic programming and serves as a foundation for understanding and solving many optimization problems.

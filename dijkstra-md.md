@@ -1,4 +1,4 @@
-# Dijkstra's Shortest Path Algorithm
+# Dijkstra's Algorithm
 
 Dijkstra's algorithm is used to find the shortest path between nodes in a graph. It works on both directed and undirected graphs and can handle weighted edges.
 
@@ -26,7 +26,7 @@ impl PartialOrd for State {
     }
 }
 
-pub fn dijkstra(graph: &HashMap<usize, Vec<(usize, usize)>>, start: usize, goal: usize) -> Option<(Vec<usize>, usize)> {
+fn dijkstra(graph: &HashMap<usize, Vec<(usize, usize)>>, start: usize, goal: usize) -> Option<(Vec<usize>, usize)> {
     let mut dist: HashMap<usize, usize> = HashMap::new();
     let mut heap = BinaryHeap::new();
     let mut prev: HashMap<usize, usize> = HashMap::new();
@@ -82,13 +82,6 @@ fn main() {
 }
 ```
 
-## Key Concepts
-
-1. **Greedy Approach**: At each step, the algorithm chooses the node with the lowest known distance from the starting node.
-2. **Relaxation**: The process of updating the distance to a node if a shorter path is found.
-3. **Priority Queue**: Used to efficiently select the next node to process.
-4. **Distance Array**: Keeps track of the current shortest known distance from the start to each node.
-
 ## When to Use
 
 Use Dijkstra's algorithm when:
@@ -104,4 +97,28 @@ Dijkstra's algorithm is particularly useful in:
 - Solving puzzles and games with weighted state transitions
 - Robotics for path planning
 
-The main advantage of Dijkstra's algorithm is its ability to find the shortest path in a weighted graph efficiently. However, it doesn't work with negative edge weights, for which the Bellman-Ford algorithm can be used instead.
+## Time Complexity
+
+The time complexity of Dijkstra's algorithm with a binary heap is O((V + E) log V), where V is the number of vertices and E is the number of edges in the graph.
+
+## Space Complexity
+
+The space complexity is O(V), where V is the number of vertices.
+
+## Advantages and Disadvantages
+
+Advantages:
+- Finds the shortest path in a weighted graph
+- Efficient for sparse graphs
+
+Disadvantages:
+- Doesn't work with negative edge weights
+- Can be slower for dense graphs compared to the Floyd-Warshall algorithm
+
+## Variations
+
+1. Bidirectional Dijkstra: Runs two simultaneous searches, one from the start and one from the goal.
+2. A* Search: An extension of Dijkstra's algorithm that uses heuristics to guide the search.
+3. Dijkstra with Priority Queue: Uses a priority queue instead of a binary heap for better performance in some cases.
+
+Dijkstra's algorithm is a fundamental graph algorithm and serves as a basis for many other path-finding algorithms.

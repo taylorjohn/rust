@@ -61,65 +61,21 @@ impl Trie {
         }
         true
     }
+}
 
-    pub fn find_words_with_prefix(&self, prefix: &str) -> Vec<String> {
-        let mut result = Vec::new();
-        let mut current_node = &self.root;
-        
-        for ch in prefix.chars() {
-            match current_node.children.get(&ch) {
-                Some(node) => current_node = node,
-                None => return result,
-            }
-        }
-
-        self.dfs(current_node, &mut String::from(prefix), &mut result);
-        result
-    }
-
-    fn dfs(&self, node: &TrieNode, current_word: &mut String, result: &mut Vec<String>) {
-        if node.is_end_of_word {
-            result.push(current_word.clone());
-        }
-
-        for (&ch, child) in &node.children {
-            current_word.push(ch);
-            self.dfs(child, current_word, result);
-            current_word.pop();
-        }
-    }
-
-    pub fn delete(&mut self, word: &str) -> bool {
-        self.delete_recursive(&mut self.root, word, 0)
-    }
-
-    fn delete_recursive(&mut self, node: &mut TrieNode, word: &str, depth: usize) -> bool {
-        if depth == word.len() {
-            if !node.is_end_of_word {
-                return false;
-            }
-            node.is_end_of_word = false;
-            return node.children.is_empty();
-        }
-
-        let current_char = word.chars().nth(depth).unwrap();
-        if let Some(child) = node.children.get_mut(&current_char) {
-            if self.delete_recursive(child, word, depth + 1) {
-                node.children.remove(&current_char);
-                return node.children.is_empty() && !node.is_end_of_word;
-            }
-        }
-        false
-    }
+// Usage
+fn main() {
+    let mut trie = Trie::new();
+    trie.insert("apple");
+    trie.insert("app");
+    trie.insert("apricot");
+    
+    println!("Search 'apple': {}", trie.search("apple"));      // true
+    println!("Search 'app': {}", trie.search("app"));          // true
+    println!("Search 'appl': {}", trie.search("appl"));        // false
+    println!("Starts with 'app': {}", trie.starts_with("app")); // true
 }
 ```
-
-## Key Concepts
-
-1. **Prefix-based Structure**: The trie efficiently stores strings by sharing common prefixes.
-2. **Node Structure**: Each node contains a HashMap of its children (keyed by characters) and a boolean indicating if it's the end of a word.
-3. **Efficient Prefix Operations**: Tries excel at operations involving string prefixes.
-4. **Space Efficiency**: Tries can be space-efficient for storing many words with common prefixes.
 
 ## When to Use
 
@@ -138,5 +94,11 @@ Tries are particularly useful in:
 - IP routing tables (for longest prefix matching)
 - Solving word games (like finding all valid words in a Boggle board)
 - Storing a dictionary of words for quick prefix-based retrieval
+
+## Time Complexity
+
+- Insertion: O(m), where m is the length of the string
+- Search: O(m)
+- Starts with: O(p), where p is the length of the prefix
 
 The main advantage of tries is their ability to perform prefix-based operations very efficiently, which makes them superior to hash tables or binary search trees for certain types of string-based tasks.
